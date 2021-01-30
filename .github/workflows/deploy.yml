@@ -25,7 +25,4 @@ jobs:
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           target: ${{ secrets.DEPLOY_DIR }}
           rm: true
-          source: |
-            index.html
-            index.css
-            assets
+          source: index.html,index.css,assets

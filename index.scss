@@ -21,19 +21,26 @@ body {
 #content {
 	width: 100%;
 
-	margin: 5% 0;
-
 	@include vertical-flex;
 
 	> * {
-		margin: 2%;
+		margin: 1%;
 	}
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
 }
 
 header {
 	@include vertical-flex;
 
+	max-width: 45%;
+
 	h1 {
+		width: max-content;
+
 		font-size: 4em;
 		font-weight: 300;
 
@@ -63,15 +70,22 @@ header {
 
 main {
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: center;
+	align-items: flex-start;
 	flex-wrap: wrap;
-
-	width: 50%;
 }
 
 section {
 	@include vertical-flex;
+
+	text-align: left;
+
+	width: 25vw;
+
+	h2 {
+		font-size: 2em;
+		margin: 0;
+	}
 }
 
 #main-photo {
@@ -85,13 +99,24 @@ section {
 		flex-direction: column-reverse;
 	}
 
+	#content {
+		margin-top: 5%;
+
+		> * {
+			max-width: 80%;
+		}
+	}
+
 	header h1 {
 		font-size: 3em;
 	}
 
 	main {
 		flex-direction: column;
-		width: unset;
+	}
+
+	section {
+		width: 80vw;
 	}
 
 	#main-photo {

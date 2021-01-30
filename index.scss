@@ -60,6 +60,8 @@ header {
 
 	// Font Awesome JS turns the icons into not <i> elements anymore, so just apply to all the children
 	> * {
+		color: black;
+
 		transition: transform 0.2s;
 
 		&:hover {

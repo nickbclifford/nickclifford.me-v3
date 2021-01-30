@@ -49,8 +49,6 @@ header {
 }
 
 #icons {
-	font-size: 2.5em;
-
 	display: flex;
 	justify-content: space-evenly;
 
@@ -58,8 +56,10 @@ header {
 
 	margin-bottom: 5%;
 
-	// Font Awesome JS turns the icons into not <i> elements anymore, so just apply to all the children
-	> * {
+	// Font Awesome JS turns the icons into SVGs
+	svg {
+		font-size: 2.5em;
+
 		color: black;
 
 		transition: transform 0.2s;
@@ -67,6 +67,11 @@ header {
 		&:hover {
 			transform: scale(1.25);
 		}
+	}
+
+	// No Font Awesome fallback
+	noscript {
+		font-size: 1.25em;
 	}
 }
 

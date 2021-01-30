@@ -1,6 +1,7 @@
 body {
 	font-size: 1.15em;
 	font-family: "Fira Sans", sans-serif;
+	text-align: center;
 
 	margin: 0;
 	height: 100%;
@@ -19,6 +20,8 @@ body {
 
 #content {
 	width: 100%;
+
+	margin: 5% 0;
 
 	@include vertical-flex;
 
@@ -41,9 +44,10 @@ header {
 main {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 
-	width: inherit;
-	max-width: 50%;
+	width: 50%;
 }
 
 section {
@@ -52,4 +56,36 @@ section {
 
 #main-photo {
 	height: 100vh;
+}
+
+// vertical styles
+
+@media screen and (max-aspect-ratio: 6 / 5) {
+	body {
+		flex-direction: column-reverse;
+	}
+
+	header h1 {
+		font-size: 3em;
+	}
+
+	main {
+		flex-direction: column;
+		width: unset;
+	}
+
+	#main-photo {
+		object-fit: cover;
+		object-position: center -10vh;
+		max-height: 40vh;
+	}
+}
+
+// for really tall and wide devices (portrait tablets), change the picture crop
+
+@media screen and (max-aspect-ratio: 1 / 1) and (min-height: 1000px) {
+	#main-photo {
+		object-position: center -17.5vh;
+		max-height: 50vh;
+	}
 }

@@ -76,16 +76,15 @@ section {
 
 	#main-photo {
 		object-fit: cover;
-		object-position: center -10vh;
+		object-position: center 30%;
 		max-height: 40vh;
 	}
 }
 
-// for really tall and wide devices (portrait tablets), change the picture crop
+// for really tall and wide devices (portrait tablets)
 
 @media screen and (max-aspect-ratio: 1 / 1) and (min-height: 1000px) {
 	#main-photo {
-		object-position: center -17.5vh;
 		max-height: 50vh;
 	}
 }

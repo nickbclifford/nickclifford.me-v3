@@ -36,7 +36,7 @@ a {
 header {
 	@include vertical-flex;
 
-	max-width: 45%;
+	max-width: 25em;
 
 	h1 {
 		width: max-content;
@@ -97,6 +97,11 @@ section {
 
 #main-photo {
 	height: 100vh;
+
+	// effectively position: absolute but for flex positioned elements
+	// allows for clean scrolling through content on weird screens
+	position: sticky;
+	top: 0;
 }
 
 // vertical styles
@@ -127,6 +132,7 @@ section {
 	}
 
 	#main-photo {
+		position: initial;
 		object-fit: cover;
 		object-position: center 30%;
 		max-height: 40vh;

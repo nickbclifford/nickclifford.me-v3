@@ -23,7 +23,7 @@ body {
 
 	@include vertical-flex;
 
-	padding: 5%;
+	padding: 1%;
 
 	> * {
 		margin: 1%;
@@ -46,6 +46,10 @@ header {
 		font-size: 4em;
 		font-weight: 300;
 
+		margin: 0;
+	}
+
+	p {
 		margin: 0;
 	}
 }
@@ -116,10 +120,6 @@ section {
 	#content {
 		padding: 0;
 		margin-top: 5%;
-
-		> * {
-			max-width: 80%;
-		}
 	}
 
 	header h1 {
@@ -131,7 +131,10 @@ section {
 	}
 
 	section {
-		width: 80vw;
+		width: 85vw;
+		h2 {
+			text-align: center;
+		}
 	}
 
 	#main-photo {
